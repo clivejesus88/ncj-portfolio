@@ -12,17 +12,22 @@ const AboutSection = () => {
         >
           <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-4">About Me</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
-            Crafting digital<br />
-            <span className="text-gradient">experiences</span>
+            Building with<br />
+            <span className="text-gradient">purpose</span>
           </h2>
           <p className="text-muted-foreground font-body leading-relaxed mb-4">
-            I'm a full-stack designer and developer with a passion for creating beautiful,
-            functional, and user-centered digital experiences. With 5+ years of experience,
-            I specialize in transforming complex problems into elegant solutions.
+            I am an 18-year-old developer based in Uganda with strong foundations in full-stack
+            web development, Python programming, and algorithmic thinking. I specialize in building
+            functional, scalable applications with clean UI/UX and efficient backend logic.
+          </p>
+          <p className="text-muted-foreground font-body leading-relaxed mb-4">
+            My interests extend beyond coding — I study business psychology, forex trading systems,
+            and digital product strategy. I aim to build multiple scalable income streams through
+            technology and data-driven systems.
           </p>
           <p className="text-muted-foreground font-body leading-relaxed">
-            When I'm not coding, you'll find me exploring design trends, contributing to
-            open-source projects, or sipping coffee at a local café while sketching new ideas.
+            Currently in Senior 5, I am focused on strengthening my technical depth, competing in
+            coding competitions, and preparing for international academic opportunities.
           </p>
         </motion.div>
 
@@ -34,10 +39,10 @@ const AboutSection = () => {
           className="grid grid-cols-2 gap-6"
         >
           {[
-            { number: "50+", label: "Projects Completed" },
-            { number: "5+", label: "Years Experience" },
-            { number: "30+", label: "Happy Clients" },
-            { number: "10+", label: "Awards Won" },
+            { number: "18", label: "Years Old" },
+            { number: "Full-Stack", label: "Developer" },
+            { number: "UG", label: "Based in Uganda" },
+            { number: "S5", label: "Senior 5 Student" },
           ].map((stat) => (
             <div
               key={stat.label}

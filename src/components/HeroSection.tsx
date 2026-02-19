@@ -16,7 +16,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6 }}
           className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-6"
         >
-          Designer & Developer
+          Full-Stack Developer & Algorithmic Systems Builder
         </motion.p>
 
         <motion.h1
@@ -25,8 +25,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-8"
         >
-          Hello, I'm{" "}
-          <span className="text-gradient">Alex Morgan</span>
+          <span className="text-gradient">Clive John</span>
         </motion.h1>
 
         <motion.p
@@ -35,15 +34,15 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 font-body"
         >
-          I craft digital experiences that blend aesthetics with functionality,
-          turning ideas into compelling digital realities.
+          I build scalable web applications, data-driven tools, and intelligent systems
+          that solve real problems. Focused on performance, clean architecture, and practical impact.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex gap-4 justify-center"
+          className="flex gap-4 justify-center flex-wrap"
         >
           <a
             href="#projects"
@@ -52,10 +51,10 @@ const HeroSection = () => {
             View My Work
           </a>
           <a
-            href="#contact"
+            href="#"
             className="inline-flex items-center px-8 py-3 border border-border text-foreground font-body font-medium rounded-sm hover:bg-secondary transition-colors"
           >
-            Get in Touch
+            Download Resume
           </a>
         </motion.div>
       </div>
