@@ -32,15 +32,17 @@ const ContactSection = () => {
             </p>
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-muted-foreground font-body">
-                <Mail size={18} className="text-primary" />
-                <span>[your email]</span>
+              <Mail size={18} className="text-primary" />
+                <span>niiweclivejesusjohn@gmail.com</span>
               </div>
               <a
-                href="#"
+                href="https://github.com/clivejesus88/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 text-muted-foreground font-body hover:text-foreground transition-colors"
               >
                 <Github size={18} className="text-primary" />
-                <span>[your GitHub link]</span>
+                <span>github.com/clivejesus88</span>
               </a>
               <div className="flex items-center gap-3 text-muted-foreground font-body">
                 <MapPin size={18} className="text-primary" />
