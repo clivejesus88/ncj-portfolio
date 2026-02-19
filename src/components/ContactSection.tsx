@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Github } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -28,28 +28,24 @@ const ContactSection = () => {
           <div>
             <h3 className="font-display text-2xl font-semibold mb-4">Get in touch</h3>
             <p className="text-muted-foreground font-body leading-relaxed mb-6">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+              Open to internships, collaborations, and technical partnerships.
             </p>
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-muted-foreground font-body">
                 <Mail size={18} className="text-primary" />
-                <span>hello@alexmorgan.dev</span>
+                <span>[your email]</span>
               </div>
+              <a
+                href="#"
+                className="flex items-center gap-3 text-muted-foreground font-body hover:text-foreground transition-colors"
+              >
+                <Github size={18} className="text-primary" />
+                <span>[your GitHub link]</span>
+              </a>
               <div className="flex items-center gap-3 text-muted-foreground font-body">
                 <MapPin size={18} className="text-primary" />
-                <span>San Francisco, CA</span>
+                <span>Uganda</span>
               </div>
-            </div>
-            <div className="flex gap-4 mt-8">
-              {[Github, Linkedin, Twitter].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                >
-                  <Icon size={18} />
-                </a>
-              ))}
             </div>
           </div>
 
