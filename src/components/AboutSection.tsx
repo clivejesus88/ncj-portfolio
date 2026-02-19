@@ -8,17 +8,17 @@ const AboutSection = () => {
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
+          transition={{ duration: 0.7 }}>
+
           <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-4">About Me</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
             Building with<br />
             <span className="text-gradient">purpose</span>
           </h2>
-          <p className="text-muted-foreground font-body leading-relaxed mb-4">
-            I am an 18-year-old developer based in Uganda with strong foundations in full-stack
-            web development, Python programming, and algorithmic thinking. I specialize in building
-            functional, scalable applications with clean UI/UX and efficient backend logic.
+          <p className="text-muted-foreground font-body leading-relaxed mb-4">I am an 19-year-old developer based in Uganda with strong foundations in full-stack web development, Python programming, and algorithmic thinking. I specialize in building functional, scalable applications with clean UI/UX and efficient backend logic.
+
+
+
           </p>
           <p className="text-muted-foreground font-body leading-relaxed mb-4">
             My interests extend beyond coding — I study business psychology, forex trading systems,
@@ -36,26 +36,26 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="grid grid-cols-2 gap-6"
-        >
+          className="grid grid-cols-2 gap-6">
+
           {[
-            { number: "18", label: "Years Old" },
-            { number: "Full-Stack", label: "Developer" },
-            { number: "UG", label: "Based in Uganda" },
-            { number: "S5", label: "Senior 5 Student" },
-          ].map((stat) => (
-            <div
-              key={stat.label}
-              className="bg-card p-6 rounded-sm border border-border text-center"
-            >
+          { number: "18", label: "Years Old" },
+          { number: "Full-Stack", label: "Developer" },
+          { number: "UG", label: "Based in Uganda" },
+          { number: "S5", label: "Senior 5 Student" }].
+          map((stat) =>
+          <div
+            key={stat.label}
+            className="bg-card p-6 rounded-sm border border-border text-center">
+
               <p className="font-display text-3xl font-bold text-primary mb-1">{stat.number}</p>
               <p className="text-muted-foreground text-sm font-body">{stat.label}</p>
             </div>
-          ))}
+          )}
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AboutSection;
