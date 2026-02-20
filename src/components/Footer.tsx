@@ -1,7 +1,10 @@
 const Footer = () => (
-  <footer className="border-t border-border py-8 px-6 text-center">
-    <p className="text-muted-foreground font-body text-sm">
-      © 2026 Clive John. Built with passion.
+  <footer className="border-t border-border py-6 px-6 flex items-center justify-between">
+    <p className="mono text-xs text-muted-foreground">
+      © 2026 Clive John
+    </p>
+    <p className="mono text-xs text-muted-foreground">
+      Built with passion
     </p>
   </footer>
 );

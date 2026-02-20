@@ -1,60 +1,61 @@
 import { motion } from "framer-motion";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
-      </div>
+      {/* Grid background */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: 'linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)',
+        backgroundSize: '60px 60px'
+      }} />
 
-      <div className="relative z-10 text-center section-padding max-w-4xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-6"
+      <div className="relative z-10 section-padding max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4 }}
+          className="mono text-primary text-xs tracking-[0.4em] uppercase mb-8"
         >
-          Full-Stack Developer & Algorithmic Systems Builder
-        </motion.p>
+          // full-stack developer
+        </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-8"
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-8 tracking-tight"
         >
-          <span className="text-gradient">Clive John</span>
+          Clive<br />
+          <span className="text-primary">John</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 font-body"
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-muted-foreground font-body text-lg md:text-xl max-w-xl mb-12 leading-relaxed"
         >
           I build scalable web applications, data-driven tools, and intelligent systems
-          that solve real problems. Focused on performance, clean architecture, and practical impact.
+          that solve real problems.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex gap-4 justify-center flex-wrap"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="flex gap-4 flex-wrap"
         >
           <a
             href="#projects"
-            className="inline-flex items-center px-8 py-3 bg-primary text-primary-foreground font-body font-medium rounded-sm hover:opacity-90 transition-opacity"
+            className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground mono text-sm font-medium hover:opacity-90 transition-opacity"
           >
-            View My Work
+            View Work →
           </a>
           <a
-            href="#"
-            className="inline-flex items-center px-8 py-3 border border-border text-foreground font-body font-medium rounded-sm hover:bg-secondary transition-colors"
+            href="#contact"
+            className="inline-flex items-center px-6 py-3 border border-border text-foreground mono text-sm font-medium hover:border-primary hover:text-primary transition-colors"
           >
-            Download Resume
+            Contact
           </a>
         </motion.div>
       </div>
@@ -63,15 +64,9 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-6 md:left-12 mono text-xs text-muted-foreground"
       >
-        <div className="w-5 h-8 border-2 border-muted-foreground/40 rounded-full flex justify-center pt-1.5">
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1 h-1 rounded-full bg-primary"
-          />
-        </div>
+        scroll ↓
       </motion.div>
     </section>
   );

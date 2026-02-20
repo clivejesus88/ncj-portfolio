@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Target } from "lucide-react";
 
 const goals = [
   "Building scalable SaaS applications",
@@ -11,32 +10,32 @@ const goals = [
 
 const GoalsSection = () => {
   return (
-    <section id="goals" className="section-padding max-w-4xl mx-auto">
+    <section id="goals" className="section-padding max-w-5xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-16"
+        className="mb-16"
       >
-        <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-4">Vision</p>
-        <h2 className="font-display text-4xl md:text-5xl font-bold">
-          Current <span className="text-gradient">Goals</span>
+        <p className="mono text-primary text-xs tracking-[0.4em] uppercase mb-6">// goals</p>
+        <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
+          Current <span className="text-primary">Focus</span>
         </h2>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 gap-4">
+      <div className="space-y-0">
         {goals.map((goal, i) => (
           <motion.div
             key={goal}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: i * 0.08 }}
-            className="flex items-center gap-4 bg-card border border-border rounded-sm p-5"
+            transition={{ duration: 0.3, delay: i * 0.05 }}
+            className="flex items-center gap-4 border-b border-border py-4 group hover:pl-2 transition-all"
           >
-            <Target size={18} className="text-primary shrink-0" />
-            <span className="font-body text-sm text-foreground">{goal}</span>
+            <span className="mono text-xs text-primary">0{i + 1}</span>
+            <span className="font-body text-sm text-muted-foreground group-hover:text-foreground transition-colors">{goal}</span>
           </motion.div>
         ))}
       </div>

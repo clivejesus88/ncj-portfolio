@@ -2,24 +2,24 @@ import { motion } from "framer-motion";
 
 const skillCategories = [
   {
-    title: "Programming Languages",
+    title: "Languages",
     skills: ["JavaScript", "Python", "HTML & CSS"],
   },
   {
-    title: "Frontend Development",
-    skills: ["React", "Responsive Design", "Component-Based Architecture", "Framer Motion"],
+    title: "Frontend",
+    skills: ["React", "Responsive Design", "Component Architecture", "Framer Motion"],
   },
   {
-    title: "Backend & APIs",
-    skills: ["FastAPI", "Flask", "REST API Development"],
+    title: "Backend",
+    skills: ["FastAPI", "Flask", "REST APIs"],
   },
   {
-    title: "Tools & Workflow",
-    skills: ["Git & GitHub", "Vite", "Render Deployment", "VS Code"],
+    title: "Tools",
+    skills: ["Git & GitHub", "Vite", "Render", "VS Code"],
   },
   {
-    title: "Other Competencies",
-    skills: ["Algorithmic Thinking", "Forex System Modeling", "Business Psychology", "Technical Problem Solving"],
+    title: "Other",
+    skills: ["Algorithmic Thinking", "Forex Modeling", "Business Psychology", "Problem Solving"],
   },
 ];
 
@@ -31,34 +31,35 @@ const SkillsSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-16"
+        className="mb-16"
       >
-        <p className="text-primary font-body text-sm tracking-[0.3em] uppercase mb-4">Expertise</p>
-        <h2 className="font-display text-4xl md:text-5xl font-bold">
-          Skills & <span className="text-gradient">Tools</span>
+        <p className="mono text-primary text-xs tracking-[0.4em] uppercase mb-6">// skills</p>
+        <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
+          Tech <span className="text-primary">Stack</span>
         </h2>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="space-y-6">
         {skillCategories.map((category, i) => (
           <motion.div
             key={category.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="bg-card border border-border rounded-sm p-6"
+            transition={{ duration: 0.4, delay: i * 0.05 }}
+            className="flex flex-col md:flex-row md:items-center gap-3 md:gap-6 border-b border-border pb-6"
           >
-            <h3 className="font-display text-lg font-semibold mb-4 text-primary">
+            <h3 className="mono text-xs text-primary uppercase tracking-wider w-28 shrink-0">
               {category.title}
             </h3>
             <div className="flex flex-wrap gap-2">
               {category.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="text-sm font-body px-3 py-1.5 bg-secondary text-secondary-foreground rounded-sm"
+                  className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors cursor-default"
                 >
                   {skill}
+                  <span className="text-border ml-2">·</span>
                 </span>
               ))}
             </div>
