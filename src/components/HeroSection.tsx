@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import clivePhoto from "@/assets/clive-photo.png";
 
 const HeroSection = () => {
   return (
@@ -75,11 +76,8 @@ const HeroSection = () => {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 border border-border bg-card flex items-center justify-center overflow-hidden"
             >
-              {/* Replace the placeholder below with your image:
-                  <img src={yourImage} alt="Clive John" className="w-full h-full object-cover" /> */}
-              <div className="text-center">
-                <span className="mono text-xs text-muted-foreground">your photo</span>
-              </div>
+              <img src={clivePhoto} alt="Clive John" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+              <div className="absolute inset-0 bg-primary/10 mix-blend-multiply pointer-events-none" />
             </motion.div>
           </motion.div>
         </div>
