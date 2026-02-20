@@ -7,7 +7,6 @@ const links = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Education", href: "#education" },
-  { label: "Goals", href: "#goals" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -15,10 +14,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-      <div className="max-w-6xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
-        <a href="#" className="font-display text-xl font-bold text-gradient">
-          CJ.
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 flex items-center justify-between h-14">
+        <a href="#" className="mono text-sm font-bold text-primary">
+          CJ_
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -26,7 +25,7 @@ const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
-              className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="mono text-xs text-muted-foreground hover:text-primary transition-colors uppercase tracking-wider"
             >
               {link.label}
             </a>
@@ -37,7 +36,7 @@ const Navbar = () => {
           onClick={() => setOpen(!open)}
           className="md:hidden text-foreground"
         >
-          {open ? <X size={20} /> : <Menu size={20} />}
+          {open ? <X size={18} /> : <Menu size={18} />}
         </button>
       </div>
 
@@ -55,7 +54,7 @@ const Navbar = () => {
                   key={link.label}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="block mono text-xs text-muted-foreground hover:text-primary transition-colors uppercase tracking-wider"
                 >
                   {link.label}
                 </a>
