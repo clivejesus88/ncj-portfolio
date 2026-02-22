@@ -19,7 +19,7 @@ const skillCategories = [
   },
   {
     title: "Other",
-    skills: ["Algorithmic Thinking", "Forex Modeling", "Business Psychology", "Problem Solving"],
+    skills: ["Algorithmic Thinking", "Forex Modeling", "Business Psychology", "Problem Solving", "Data Science", "Machine Learning"],
   },
 ];
 

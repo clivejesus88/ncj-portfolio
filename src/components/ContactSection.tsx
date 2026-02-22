@@ -1,7 +1,29 @@
 import { motion } from "framer-motion";
 import { Mail, MapPin, Github } from "lucide-react";
+import { useState } from "react";
 
 const ContactSection = () => {
+
+  const [ email, setEmail ] = useState<string>("");
+  const [ name, setName ] = useState<string>("");
+  const [ message, setMessage ] = useState<string>("");
+
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    console.log(
+      {
+        'name': name,
+        'email':email,
+        'message': message
+      }
+    )
+    setEmail("");
+    setName("");
+    setMessage("")
+  }
+
   return (
     <section id="contact" className="section-padding max-w-5xl mx-auto">
       <motion.div
@@ -51,21 +73,26 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder="Name"
-              className="w-full bg-card border border-border px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-            />
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full bg-card border border-border px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"   
+              />
             <input
               type="email"
               placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full bg-card border border-border px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
             />
             <textarea
               rows={4}
               placeholder="Message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               className="w-full bg-card border border-border px-4 py-3 font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
             />
             <button

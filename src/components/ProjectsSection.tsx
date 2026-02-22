@@ -10,6 +10,7 @@ const projects = [
     role: "Full-stack developer — frontend interface, routing architecture, and deployment.",
     tags: ["React", "Vite", "JavaScript", "CSS", "Render"],
     outcome: "Production-ready with responsive design and structured component architecture.",
+    link: "https://exam-hub-wheat.vercel.app",
   },
   {
     title: "Betting Algorithm",
@@ -19,7 +20,18 @@ const projects = [
     role: "System designer and algorithm developer.",
     tags: ["Python", "Statistical Modeling"],
     outcome: "Prototype evaluating probabilistic outcomes and testing strategy consistency.",
+    link: '',
   },
+  {
+    title: "PHD Family Network International",
+    category: "Web Development",
+    description:
+      "A Non Governmental Organisation focused on creating a difference worldwide.",
+    role: "Full-stack developer.",
+    tags: ["Flask", "HTMl", "Bootstrap"],
+    outcome: "Extending the goal outreach to the whole world internet wide",
+    link: "https://phdfamilynetwork.onrender.com"
+  }
 ];
 
 const ProjectsSection = () => {
@@ -43,6 +55,9 @@ const ProjectsSection = () => {
 
       <div className="space-y-px">
         {projects.map((project, i) => (
+          <a href={project.link}
+          key={project.title}
+          >
           <motion.div
             key={project.title}
             initial={{ opacity: 0, y: 20 }}
@@ -77,7 +92,7 @@ const ProjectsSection = () => {
             <p className="font-body text-xs text-muted-foreground">
               <span className="text-foreground">→</span> {project.outcome}
             </p>
-          </motion.div>
+          </motion.div></a>
         ))}
       </div>
     </section>

@@ -18,13 +18,13 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground font-body leading-relaxed text-sm">
               <p>
-                I am an 18-year-old developer based in Uganda with strong foundations in full-stack web development, Python programming, and algorithmic thinking.
+                I am a 19-year-old developer based in Uganda with strong foundations in full-stack web development, Python programming, Data Science, Machine Learning and algorithmic thinking.
               </p>
               <p>
                 My interests extend beyond coding — I study business psychology, forex trading systems, and digital product strategy.
               </p>
               <p>
-                Currently in Senior 5, focused on strengthening technical depth and preparing for international academic opportunities.
+                Currently in Senior 6, focused on strengthening technical depth and preparing for international academic opportunities.
               </p>
             </div>
           </div>
@@ -33,10 +33,12 @@ const AboutSection = () => {
           
           <div className="grid grid-cols-2 gap-4 content-start">
             {[
-              { number: "18", label: "Years Old" },
+              { number: "19", label: "Years Old" },
               { number: "FS", label: "Full-Stack" },
               { number: "UG", label: "Uganda" },
-              { number: "S5", label: "Senior 5" },
+              { number: "S.6", label: "Senior 6" },
+              { number: "AI/ML", label: "Artificial Intelligence & Machine Learning"},
+              { number: "DS", label:"Data Science"}
             ].map((stat) => (
               <div
                 key={stat.label}

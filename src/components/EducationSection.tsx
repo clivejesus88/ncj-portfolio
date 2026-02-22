@@ -26,7 +26,7 @@ const EducationSection = () => {
         <div className="flex items-start gap-4">
           <span className="mono text-primary text-xs mt-1">01</span>
           <div>
-            <h3 className="font-display text-lg font-bold mb-1">Senior 5 Student</h3>
+            <h3 className="font-display text-lg font-bold mb-1">Senior 6 Student</h3>
             <p className="text-muted-foreground font-body text-sm leading-relaxed">
               Focused on Mathematics, Computer Science, and analytical problem solving.
             </p>

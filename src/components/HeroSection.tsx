@@ -28,9 +28,9 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-8 tracking-tight"
-            >
+            > Niiwe
               Clive<br />
-              <span className="text-primary">John</span>
+              <span className="text-primary">Jesus</span>
             </motion.h1>
 
             <motion.p
@@ -39,7 +39,7 @@ const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-muted-foreground font-body text-lg md:text-xl max-w-xl mb-12 leading-relaxed"
             >
-              I build scalable web applications, data-driven tools, and intelligent systems
+              I build scalable web applications, data-driven tools,work with big data,  and intelligent systems
               that solve real problems.
             </motion.p>
 
