@@ -1,7 +1,7 @@
 const Footer = () => (
   <footer className="border-t border-border py-6 px-6 flex items-center justify-between">
     <p className="mono text-xs text-muted-foreground">
-      © 2026 Clive John
+      © 2026 Niiwe Clive Jesus
     </p>
     <p className="mono text-xs text-muted-foreground">
       Built with passion
